@@ -6,6 +6,7 @@
     outline: none;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 :root{
     --pink: rgb(207, 60, 60);
@@ -62,13 +63,13 @@ header .logo i{
     color: var(--pink);
     padding: .2rem;
 }
-.fa-times{
+header .fa-times{
     font-size: 3rem;
     color: var(--pink);
     cursor: pointer;
     display: none;
 }
-.fa-bars{
+header .fa-bars{
     font-size: 3rem;
     color: var(--pink);
     cursor: pointer;
@@ -110,7 +111,10 @@ header .logo i{
         padding: 0;
     }
     .home .content p{
-        padding: 1.5rem 2rem;
+        padding: 0;
+    }
+    #text{
+        padding: 0;
     }
     .home::before{
         display: none;
@@ -134,14 +138,34 @@ header .logo i{
     }
     .image{
         width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     .image img{
+        object-fit: contain;
+    }
+    .contact{
+        display: flex;
+        flex-direction: column;
+    }
+    .contact .row{
         width: 100%;
+        display: flex;
+        align-items: center;
+        padding: 0;
+    }
+    .contact .row .image img{
+        display: none;
+    }
+    .contact .row .form-container{
+        padding-left: 30px;
+        padding-top: 20px;
     }
 }
 .home{
     min-height: 100vh;
-    background: linear-gradient(rgba(247, 34, 34, 0.8),#3d33c9cc),url("..img/bg.png") no-repeat;
+    background: linear-gradient(rgba(247, 34, 34, 0.8),#3d33c9cc),url("bg.png") no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -163,11 +187,11 @@ header .logo i{
     padding: 1rem 0;
     text-shadow: 0 0.3rem .5rem rgba(0, 0, 0, 0.3);
     text-transform: uppercase;
+    text-align: center;
 }
 .home .content p{
     font-size: 2rem;
     color: #eee;
-    padding: 1rem 25rem;
     text-align: center;
 }
 .home .content button{
@@ -181,10 +205,12 @@ header .logo i{
     transition: .2s;
     border: none;
     box-shadow: 0 .3rem 1rem rgba(0, 0, 0, 0.3);
+    margin-top: 35px;
 }
 .home .content button:hover{
-    letter-spacing: .2rem;
-    transform: scale(1.15);
+    letter-spacing: .3rem;
+    transform: scale(1.10);
+    opacity: 0.7;
 }
 .home .box-container{
     display: flex;
@@ -193,7 +219,7 @@ header .logo i{
 }
 .home .box-container .box{
     height: 20rem;
-    width: 20rem;
+    width: 24rem;
     background: #fff;
     text-align: center;
     border-radius: 1rem;
@@ -205,18 +231,23 @@ header .logo i{
     display: flex;
     flex-direction: column;
 }
-.home .box-container .box div{
+.home .box-container .box i{
     font-size: 30px;
     background: var(--violet);
+    color: #fff;
     height: 6rem;
     width: 6rem;
     border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .home .box-container .box h3{
     font-size: 25px;
     font-weight: 400;
     text-shadow: 0 .3rem .5rem rgba(0, 0, 0, 0.5);
     color: var(--pink);
+    white-space: nowrap;
 }
 .home .box-container .box p{
     padding: 1rem;
@@ -342,6 +373,13 @@ header .logo i{
     padding-top: 4rem;
     flex-wrap: wrap;
 }
+.course .box-container h3{
+    font-size: 20px;
+}
+.course .box-container p{
+    font-size: 15px;
+    padding-top: 15px;
+}
 .course .box-container .box{
     height: 18rem;
     width: 25rem;
@@ -368,6 +406,7 @@ header .logo i{
     border-left: 1rem solid var(--pink);
     border-right: 1rem solid var(--pink);
     box-shadow: 0 0 0 1rem #fff inset;
+    font-size: 40px;
 }
 .review{
     background: #fff;
@@ -386,6 +425,7 @@ header .logo i{
     box-shadow: 0 .3rem .5rem rgba(0, 0, 0, 0.3);
     margin-left: 2rem;
     margin-right: 2rem;
+    padding-top: 20px;
 }
 .review .box-container .box img{
     height: 8.5rem;
@@ -408,30 +448,44 @@ header .logo i{
     padding: 0 .3rem;
     transition: .1s;
 }
+.review .box-container .box i{
+    color: var(--pink);
+    padding-top: 25px;
+    font-size: 10px;
+}
 .review .box-container .box:hover{
     transform: translateY(-10px)
 }
 .contact{
     background: #333;
+    align-items: center;
+    justify-content: center;
 }
 
 .contact .row{
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 5rem 0;
+    padding: 0rem 0;
 }
 .contact .row .image img{
     width: 50vw;
     height: 70vh;
 }
+.contact .row .form-container form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-right: 40px;
+}
 .contact .row .form-container{
-    width: 50%;
-    padding-right: 6rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .contact .row .form-container input, textarea{
     height: 4rem;
-    width: 100%;
     background: #fff;
     border: none;
     border-radius: 5rem;
@@ -440,6 +494,7 @@ header .logo i{
     color: var(--pink);
     font-size: 1.7rem;
     transition: .2s linear;
+    width: 100%;
 }
 .contact .row .form-container textarea{
     height: 20rem;
@@ -453,4 +508,15 @@ header .logo i{
 .contact .row .form-container input:is(:focus, :valid) ~ input::placeholder{
     font-size: .75rem;
     transform: translateY(-130%);
+}
+
+.copyright{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    color: rgb(87, 77, 77);
+    margin-bottom: 100px;
+    font-size: 20px;
 }
