@@ -210,11 +210,11 @@
                 <img src="contact-img.png" alt="">
             </div>
         <div class="form-container">
-                <form action="">
-                    <input type="text" placeholder="full name" id="transform" onfocus="scroll()">
-                    <input type="email" placeholder="enter your email" id="transform">
-                    <input type="number" placeholder="phone" id="transform">
-                    <textarea name="" id="" cols="30" rows="10" placeholder="message" id="transform"></textarea>
+                <form action="form-handler.php">
+                    <input type="text" placeholder="full name" id="transform" onfocus="scroll()" name='name'>
+                    <input type="email" placeholder="enter your email" id="transform" name='email'>
+                    <input type="number" placeholder="phone" id="transform" name='phone'>
+                    <textarea name="" id="" cols="30" rows="10" placeholder="message" id="transform" name='message'></textarea>
                     <input type="submit" value="message">
                 </form>
             </div>
