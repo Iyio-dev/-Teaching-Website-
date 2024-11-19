@@ -8,9 +8,6 @@
     scroll-behavior: smooth;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
-input{
-    text-transform: none;
-}
 :root{
     --pink: rgb(207, 60, 60);
     --violet: rgb(49, 49, 201);
@@ -18,16 +15,28 @@ input{
 :selection{
     background: var(--pink);
     color: #fff;
+    color: #534949;
+}
+input{
+    text-transform: none;
 }
 html{
     font-size: 62.5%;
     overflow-x: hidden;
 }
+
+.btn{
+    width: 120px;
+    height: 40px;
+    background-color: var(--pink);
+    color: var(--violet);
+}
 header{
     width: 96%;
     background: #fff;
     position: fixed;
-    top: 2rem; left: 50%;
+    top: 2rem; 
+    left: 50%;
     transform: translateX(-50%);
     border-radius: 5rem;
     display: flex;
@@ -36,6 +45,24 @@ header{
     padding: 1rem 2rem;
     z-index: 1000;
     transition: .2s;
+}
+
+.signup-btn{
+    color: rgb(198, 192, 255);
+    font-size: 20px;
+    height: 40px;
+    width: 90px;
+    border: 1px solid var(--violet);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    transition: 1s;
+}
+
+.signup-btn:hover{
+    background: var(--violet);
+    color: #fff;
 }
 
 header .navbar ul{
@@ -168,7 +195,7 @@ header .fa-bars{
 }
 .home{
     min-height: 100vh;
-    background: linear-gradient(rgba(247, 34, 34, 0.8),#3d33c9cc),url("bg.png") no-repeat;
+    background: linear-gradient(rgba(247, 34, 34, 0.8),#3d33c9cc),url("bg.jpg") no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -384,8 +411,7 @@ header .fa-bars{
     padding-top: 15px;
 }
 .course .box-container .box{
-    height: 18rem;
-    width: 25rem;
+    width: 30rem;
     margin: 3.5rem 2rem;
     text-align: center;
     box-shadow: .3rem .3rem 0 .1rem var(--violet),
@@ -396,6 +422,21 @@ header .fa-bars{
 .course .box-container .box:hover{
     transform: scale(1.1);
 }
+.course .box-container .box .btn{
+    width: 120px;
+    height: 40px;
+    background-color: var(--pink);
+    color: var(--violet);
+    margin-bottom: 30px;
+    outline: 0;
+    border: 0;
+    border-radius: 5px;
+}
+
+.course .box-container .box .btn a{
+    color: #fff;
+}
+
 .course .box-container .box i{
     height: 10rem;
     width: 10rem;
@@ -475,19 +516,19 @@ header .fa-bars{
     width: 50vw;
     height: 70vh;
 }
-.contact .row .form-container form{
+.form-container form{
     width: 100%;
     display: flex;
     flex-direction: column;
     margin-right: 40px;
 }
-.contact .row .form-container{
+.form-container{
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.contact .row .form-container input, textarea{
+.form-container input, textarea{
     height: 4rem;
     background: #fff;
     border: none;
